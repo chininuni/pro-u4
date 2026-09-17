@@ -1,5 +1,11 @@
-let numero = Number(prompt("¿Desde qué número quieres hacer la cuenta regresiva?"));
-for (let i = numero; i >= 1; i--) {
-    console.log(i);
+let saldo = 5000;
+while(saldo>0){
+    let retiro = Number(prompt("¿Cuánto desea retirar?"));
+if (retiro>saldo){
+    console.log("Saldo insuficiente.");
+} else {
+    saldo-=retiro;
+    console.log("Saldo restante: $"saldo);
 }
-console.log("Despegue!");
+}
+console.log("Cuenta vaciada.")

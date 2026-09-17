@@ -1,10 +1,8 @@
-let cantidadNotas = Number(prompt("¿Cuántas notas quieres ingresar?"));
-let sumaTotal = 0;
-for (let i = 1; i <= cantidadNotas; i++) {
-    let nota = Number(prompt("Ingresa la nota " + i + ":"));
-    sumaTotal += nota;
+let numero = Number(prompt("Ingrese un número entero positivo."));
+let original = numero;
+let cantidadDigitos = 0;
+while(numero>0){
+    numero= Math.floor(numero/10);
+    cantidadDigitos++;
 }
-let promedio = sumaTotal / cantidadNotas;
-console.log("Suma total: " + sumaTotal);
-console.log("Promedio: " + promedio);
-
+console.log("El número" + original + "tiene" + cantidadDigitos + "dígitos");
