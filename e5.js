@@ -1,8 +1,13 @@
-let numero = Number(prompt("Ingrese un número entero positivo."));
-let original = numero;
-let cantidadDigitos = 0;
-while(numero>0){
-    numero= Math.floor(numero/10);
-    cantidadDigitos++;
+let pin = "1234";
+let intento;
+let intentos = 0;
+do {
+    intento = prompt("Ingresa el PIN:");
+    intentos++;
+    if (intento === pin) {
+        console.log("Acceso permitido");
+    }
+} while (intento !== pin && intentos < 3);
+if (intento !== pin) {
+    console.log("Cuenta bloqueada");
 }
-console.log("El número" + original + "tiene" + cantidadDigitos + "dígitos");
